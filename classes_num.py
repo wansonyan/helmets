@@ -134,9 +134,9 @@ for color in color_list:
     result[color] = {'correct': 0, 'wrong': 0}
 
 # 浏览三个文件夹: test_xml, train_xml, val_xml
-xml_folders = ['train_xml', 'val_xml', 'test_xml']
+xml_folders = ['train', 'val', 'test']
 #base_folder_path = 'E:\\helmetcase\\yolo2voccase1'  # 修改基础文件夹路径
-base_folder_path = 'E:\\helmetcase\\VOC4_labels'
+base_folder_path = 'E:\\helmetcase\\newcase4test_voc\\labels\\labels'
 
 for xml_folder_name in xml_folders:
     # 构建当前文件夹路径

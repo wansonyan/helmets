@@ -4,7 +4,7 @@
 # @PRO_NAME: helmets
 # @File    : select_filenames.py
 # @Software: PyCharm 
-# @Comment :
+# @Comment : 根据相应的文件名移动到指定的文件夹
 import os
 import shutil
 

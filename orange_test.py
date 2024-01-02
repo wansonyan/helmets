@@ -90,8 +90,9 @@ import xml.etree.ElementTree as ET
 color_list = ['red', 'orange', 'blue', 'white', 'yellow']
 
 # 浏览三个文件夹: test_xml, train_xml, val_xml
-xml_folders = ['test_xml', 'train_xml', 'val_xml']
-base_folder_path = 'E:\\helmetcase\\yolo2voc'
+xml_folders = ['test', 'train', 'val']
+# base_folder_path = 'E:\\helmetcase\\yolo2voc'
+base_folder_path = 'E:\\helmetcase\\newcase4test_voc\\newcase4test\labels'
 
 for xml_folder_name in xml_folders:
     # 构建当前文件夹路径
@@ -153,19 +154,19 @@ for xml_folder_name in xml_folders:
                     color_count[color] += 1
 
                 # 如果该对象是 orange 颜色标记，且对应的正确或错误标记是 correct，则将 orange_correct 计数器加一，并记录对应的文件名
-                if name == 'correct' and color == 'orange':
+                if name == 'correct' and color == 'red':
                     orange_correct += 1
                     orange_correct_files.append(file_name)
 
                 # 如果该对象是 orange 颜色标记，且对应的正确或错误标记是 wrong，则将 orange_wrong 计数器加一，并记录对应的文件名
-                if name == 'wrong' and color == 'orange':
+                if name == 'wrong' and color == 'red':
                     orange_wrong += 1
                     orange_wrong_files.append(file_name)
 
         # 如果只有 orange 颜色标记，则将 orange-only 文件数量计数器加一，并统计 orange 对应的文件名列表
 
         # 如果只有 orange 颜色标记，则将 orange-only 文件数量计数器加一，并统计 orange 对应的文件名列表
-        if sum(color_count.values()) == color_count['orange']:
+        if sum(color_count.values()) == color_count['red']:
             orange_count += 1
             if orange_correct > 0:
                 orange_correct_count += 1
@@ -173,8 +174,8 @@ for xml_folder_name in xml_folders:
                 orange_wrong_count += 1
 
     # 输出 orange-only 文件数量以及 orange-correct 和 orange-wrong 对应的文件名列表
-    print(f"Number of orange-only files: {orange_count}")
-    print(f"Number of orange-correct files: {orange_correct_count}")
-    print(f"Number of orange-wrong files: {orange_wrong_count}")
-    print(f"File names of orange-correct files: {orange_correct_files}")
-    print(f"File names of orange-wrong files: {orange_wrong_files}")
+    print(f"Number of red-only files: {orange_count}")
+    print(f"Number of red-correct files: {orange_correct_count}")
+    print(f"Number of red-wrong files: {orange_wrong_count}")
+    print(f"File names of red-correct files: {orange_correct_files}")
+    print(f"File names of red-wrong files: {orange_wrong_files}")

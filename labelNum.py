@@ -11,8 +11,8 @@ import os, sys
 import matplotlib.pyplot as plt
 import  numpy as np
 import cv2
-#rootdir = r"F:/GraFile/helmet/DATA0109/ANN"
-rootdir = r"E:\\helmetcase\\color\\newyellow\\wrong_xml"
+rootdir = r"E:\\helmetcase\\ANN"
+#rootdir = r"E:\\helmetcase\\AAAtest\\white_test"
 doc_xml = os.listdir(rootdir)
 print('num_anno', len(doc_xml))
 classes_list = []
